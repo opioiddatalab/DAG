@@ -24,7 +24,7 @@ clinical_indication 1 @0.201,0.406
 comorbid_conditions_(respiratory_or_metabolic) 1 @0.142,0.278
 cost_to_patient 1 @0.339,0.789
 diverted_Rx_opioid_supply 1 @0.919,0.185
-dose%2FMMI 1 @0.764,0.647
+dose%2FMME 1 @0.764,0.647
 expected_patient_opioid_duration 1 @0.138,0.154
 heroin_supply 1 @0.724,0.253
 injection 1 @0.675,0.460
@@ -61,7 +61,7 @@ unmeasured_confounding 1 @0.108,1.090
 
 ACA Medicaid_expansion insurance_rules_(prior_auth%2C_parity)
 ACE opioid%20related%20death previous_addiction_tx
-ADF dose%2FMMI injection opioid%20related%20death tampering
+ADF dose%2FMME injection opioid%20related%20death tampering
 ADF_use_in_prescriber_professional%20network ADF
 BMI opioid%20related%20death prescribing_decision
 Medicaid_expansion insurance_rules_(prior_auth%2C_parity)
@@ -72,7 +72,7 @@ clinical_indication prescribing_decision
 comorbid_conditions_(respiratory_or_metabolic) clinical_indication opioid%20related%20death
 cost_to_patient ADF
 diverted_Rx_opioid_supply street_price
-dose%2FMMI opioid%20related%20death
+dose%2FMME opioid%20related%20death
 expected_patient_opioid_duration clinical_indication
 heroin_supply diverted_Rx_opioid_supply opioid%20related%20death
 injection opioid%20related%20death
