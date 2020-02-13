@@ -1,4 +1,6 @@
-We used [DAGitty](http://www.dagitty.net) to analyze potential confounders that need to be adjusted for in the relationship between ADF prescribing and opioid overdose.
+# DAGitty code to reproduce our base DAG
+
+We used [DAGitty (version 2.3)] to identify possible confounders of the relationship between ADF prescribing and overdose death.
 
 Based on the arrows we drew so far, there are 5 possible minimal sufficient adjustment sets for estimating the total effect of ADF on opioid related death:
 1. ACE, BMI, clinical_indication, prior_Rx_opioid, take_home_naloxone, unmeasured_confounding
@@ -7,7 +9,7 @@ Based on the arrows we drew so far, there are 5 possible minimal sufficient adju
 4. BMI, comorbid_conditions_(respiratory_or_metabolic), previous_addiction_tx, unmeasured_confounding or
 5. prescriber_familiarity, prescriber_specialty, prescribing_decision, unmeasured_confounding
 
-If you want to play with the arrows, here's the code you can copy-paste to generate the [DAG figure](https://github.com/opioiddatalab/DAG/blob/master/dagitty-model.pdf).
+If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.daggity.net) to recreate [our DAG](https://github.com/opioiddatalab/DAG/blob/master/dagitty-model.pdf):
 
 ```ACA 1 @0.466,-0.170
 ACE 1 @0.928,0.863
@@ -22,7 +24,7 @@ clinical_indication 1 @0.201,0.406
 comorbid_conditions_(respiratory_or_metabolic) 1 @0.142,0.278
 cost_to_patient 1 @0.339,0.789
 diverted_Rx_opioid_supply 1 @0.919,0.185
-dose%2FMMI 1 @0.764,0.647
+dose%2FMME 1 @0.764,0.647
 expected_patient_opioid_duration 1 @0.138,0.154
 heroin_supply 1 @0.724,0.253
 injection 1 @0.675,0.460
@@ -59,7 +61,7 @@ unmeasured_confounding 1 @0.108,1.090
 
 ACA Medicaid_expansion insurance_rules_(prior_auth%2C_parity)
 ACE opioid%20related%20death previous_addiction_tx
-ADF dose%2FMMI injection opioid%20related%20death tampering
+ADF dose%2FMME injection opioid%20related%20death tampering
 ADF_use_in_prescriber_professional%20network ADF
 BMI opioid%20related%20death prescribing_decision
 Medicaid_expansion insurance_rules_(prior_auth%2C_parity)
@@ -70,7 +72,7 @@ clinical_indication prescribing_decision
 comorbid_conditions_(respiratory_or_metabolic) clinical_indication opioid%20related%20death
 cost_to_patient ADF
 diverted_Rx_opioid_supply street_price
-dose%2FMMI opioid%20related%20death
+dose%2FMME opioid%20related%20death
 expected_patient_opioid_duration clinical_indication
 heroin_supply diverted_Rx_opioid_supply opioid%20related%20death
 injection opioid%20related%20death
@@ -102,4 +104,10 @@ state_of_residence ACA Medicaid_expansion
 street_price opioid%20related%20death
 take_home_naloxone opioid%20related%20death
 tampering injection
-unmeasured_confounding ADF opioid%20related%20death```
+unmeasured_confounding ADF opioid%20related%20death
+```
+
+Credit for DAGitty goes to:
+Johannes Textor, Benito van der Zander, Mark K. Gilthorpe, Maciej Liskiewicz, George T.H. Ellison.
+[Robust causal inference using directed acyclic graphs: the R package 'dagitty'.](http://johannes-textor.name/papers/2017-ije.pdf)
+<i>International Journal of Epidemiology</i>, 45(6):1887-1894, 2016.
