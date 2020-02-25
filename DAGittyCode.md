@@ -9,7 +9,7 @@ Based on the arrows we drew so far, there are 5 possible minimal sufficient adju
 4. BMI, comorbid_conditions_(respiratory_or_metabolic), previous_addiction_tx, unmeasured_confounding or
 5. prescriber_familiarity, prescriber_specialty, prescribing_decision, unmeasured_confounding
 
-If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.daggity.net) to recreate [our DAG](https://github.com/opioiddatalab/DAG/blob/master/dagitty-model.pdf):
+If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.dagitty.net) to recreate [our DAG](https://github.com/opioiddatalab/DAG/blob/master/dagitty-model.pdf):
 
 ```ACA 1 @0.466,-0.170
 ACE 1 @0.928,0.863
