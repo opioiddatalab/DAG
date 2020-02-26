@@ -153,6 +153,5 @@ The discussion was held via telecon on 26-February 2020, with FDA, UNC and UK at
 + Is there time-varying selection bias if there have been fundamental shift over the past decade in what kind of pain requires opioids? What are the implications of including `need for opioids` on the causal pathway? Does *not* including it (e.g., focusing only on `ADF prescribed` :arrow_right: `opioid-related death`) induce selection bias over time, in that people who would have gotten opioids earlier would not later for the same condition? To what extent can baseline adjustment help with this?<br>
 `need for opioids` :arrow_right: `ADF prescribed` :arrow_right: `opioid-related death` <br>
 + Are there other time-varying secular trends (e.g., Medicaid expansion) that should be accounted for? In one way we are selecting people with insurance in the KY Medicaid and NC BCBS populations; and we can continue to follow using PDMP data in KY even after loss of eligibility. 
-
-
++ There was a broader question of the bigger picture -- can observational (claims) data even be useful in answering these types of questions? As well as the corollary, if not globally useful, what kinds of scenarios can we make solid inference from this kind of analysis?
 
