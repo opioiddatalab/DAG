@@ -1,4 +1,4 @@
-# DAGitty code to reproduce our base DAG
+# Causal Pathways between ADF dispensing and opioid-related mortality
 
 We started by reviewing some [recent background data](https://github.com/opioiddatalab/DAG/blob/master/background.md) on ADF prescribing.<br>
 
@@ -140,3 +140,19 @@ Credit for DAGitty goes to:
 Johannes Textor, Benito van der Zander, Mark K. Gilthorpe, Maciej Liskiewicz, George T.H. Ellison.
 [Robust causal inference using directed acyclic graphs: the R package 'dagitty'.](http://johannes-textor.name/papers/2017-ije.pdf)
 <i>International Journal of Epidemiology</i>, 45(6):1887-1894, 2016.
+
+---
+
+# Discussion Debrief
+The discussion was held via telecon on 26-February 2020, with FDA, UNC and UK attendees.<br>
+
+**Suggestions**
++ Prior (non-fatal) OD history is documented in claims data, so these should be included as a potential time-varying confounder, along with other comorbidities.
++ Concurrent benzodiazepine prescribing should be added to the list of potential confounders
++ Aggregating prescriber characteristics (bottom green cluster) makes sense, especially since they only go into ADF prescribing decision box. However, the implications of the [ICPE abstract](https://opioiddatalab.github.io/PharmacistPrescriberSurveys/earlyAdopters/ICPEabstractEarlyPrescribers_submitted.html) finding (early prescribers may be more likely to use risk stratification tools) suggests a potential confounder path between ADF prescribing and overdose outcome. This should be added to the model above for assessment. This could be operationalized by looking at the prescribing of other newly marketed drugs in claims data (including non-opioids).
++ Is there time-varying selection bias if there have been fundamental shift over the past decade in what kind of pain requires opioids? What are the implications of including `need for opioids` on the causal pathway? Does *not* including it (e.g., focusing only on `ADF prescribed` :arrow_right: `opioid-related death`) induce selection bias over time, in that people who would have gotten opioids earlier would not later for the same condition? To what extent can baseline adjustment help with this?<br>
+`need for opioids` :arrow_right: `ADF prescribed` :arrow_right: `opioid-related death` <br>
++ Are there other time-varying secular trends (e.g., Medicaid expansion) that should be accounted for? In one way we are selecting people with insurance in the KY Medicaid and NC BCBS populations; and we can continue to follow using PDMP data in KY even after loss of eligibility. 
+
+
+
