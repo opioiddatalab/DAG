@@ -12,8 +12,9 @@ Based on the updated DAGitty model, there are 2 possible minimal sufficient adju
 1. ACE, BMI, Mental Health Disorders, Other substance use disorders, comorbid_conditions_(respiratory_or_metabolic), patient_prior_use_duration, prior_Rx_opioid, take_home_naloxone, unmeasured_confounding<br>
 2. BMI, Mental Health Disorders, Other substance use disorders, comorbid_conditions_(respiratory_or_metabolic), patient_prior_use_duration, previous_addiction_tx, prior_Rx_opioid, unmeasured_confounding<br>
 
-![DAG](https://opioiddatalab.github.io/DAG/docs/dagitty-model.png "DAG from Feb 26, 2020")
-![DAG Legend](https://opioiddatalab.github.io/DAG/docs/DAGlegend.png "DAGitty legend")
+![DAG](https://opioiddatalab.github.io/DAG/docs/dagitty-model.png "DAG from Feb 26, 2020")<br>
+
+![DAG Legend](https://opioiddatalab.github.io/DAG/docs/DAGlegend.png "DAGitty legend")<br>
 
 If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.dagitty.net):<br>
 
