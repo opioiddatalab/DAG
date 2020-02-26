@@ -1,8 +1,8 @@
 # DAGitty code to reproduce our base DAG
 
-We used [DAGitty (version 3.0)](daggity.net) to identify possible confounders of the relationship between ADF prescribing and overdose death.
+We started by reviewing some [recent background data](https://github.com/opioiddatalab/DAG/blob/master/background.md) on ADF prescribing.<br>
 
-We simplified the [preivous versions](https://github.com/opioiddatalab/DAG/commits/master/DAGittyCode.md) to consolidate related variables that influenced exposure (e.g., prescribing decisions), but not overdose *per se*. We are considering 42 covariates (listed below), with the main causal pathway of interest being:
+We used [DAGitty (version 3.0)](daggity.net) to identify possible confounders of the relationship between ADF prescribing and overdose death. We simplified the [preivous versions](https://github.com/opioiddatalab/DAG/commits/master/DAGittyCode.md) to consolidate related variables that influenced exposure (e.g., prescribing decisions), but not overdose *per se*. We are considering 42 covariates (listed below), with the main causal pathway of interest being:
 <br>
 
 `need for opioids` :arrow_right: `ADF prescribed` :arrow_right: `opioid-related death` 
