@@ -14,7 +14,7 @@ Based on the updated DAGitty model, there are 2 possible minimal sufficient adju
 
 ![DAG](https://opioiddatalab.github.io/DAG/docs/dagitty-model.png "DAG from Feb 26, 2020")
 
-If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.dagitty.net) to recreate [our DAG](https://github.com/opioiddatalab/DAG/blob/master/dagitty-model.pdf):<br>
+If you want to play with the arrows, here's the code you can copy-paste the code below into [DAGitty](http://www.dagitty.net):<br>
 
 ```
 dag {
