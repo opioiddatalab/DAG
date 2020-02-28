@@ -143,7 +143,7 @@ Johannes Textor, Benito van der Zander, Mark K. Gilthorpe, Maciej Liskiewicz, Ge
 
 ---
 
-# Discussion Debrief
+# Debrief
 The discussion was held via telecon on 26-February 2020, with FDA, UNC and UK attendees.<br>
 
 **Suggestions**
